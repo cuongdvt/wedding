@@ -13,11 +13,11 @@ const icielnovecentosans: NextFontWithVariable = localFont({
   display: 'swap',
 });
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+interface Props {
+  children: React.ReactElement;
+}
+
+const RootLayout: React.FC<Props> = ({ children }) => {
   return (
     <html lang="en">
       <body suppressHydrationWarning className={`${icielnovecentosans.variable}`}>
@@ -25,4 +25,6 @@ export default function RootLayout({
       </body>
     </html>
   );
-}
+};
+
+export default RootLayout;
