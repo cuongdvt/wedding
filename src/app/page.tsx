@@ -1,4 +1,4 @@
-import IntroSectionView from "@/components/intro/page";
+import IntroSectionView from '@/components/intro/page';
 
 export default function Home() {
   return (

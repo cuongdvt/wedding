@@ -6,7 +6,8 @@
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "format": "yarn prettier --write --list-different ./src"
   },
   "dependencies": {
     "@tailwindcss/forms": "^0.5.10",
@@ -20,6 +21,7 @@
     "@eslint/eslintrc": "^3",
     "@stylistic/eslint-plugin": "^5.4.0",
     "@tailwindcss/postcss": "^4.1.14",
+    "@trivago/prettier-plugin-sort-imports": "^5.2.2",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
@@ -29,6 +31,8 @@
     "eslint-plugin-no-relative-import-paths": "^1.6.1",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-unused-imports": "^4.2.0",
+    "prettier": "^3.6.2",
+    "prettier-plugin-tailwindcss": "^0.6.14",
     "tailwindcss": "^4.1.14",
     "typescript": "^5",
     "typescript-eslint": "^8.46.0"

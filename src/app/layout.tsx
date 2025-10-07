@@ -1,9 +1,9 @@
-import "@app/globals.css";
-import type { Metadata } from "next";
+import '@app/globals.css';
+import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 
 export const metadata: Metadata = {
-  title: "Thái Cường & Thu Phương",
+  title: 'Thái Cường & Thu Phương',
 };
 
 const icielnovecentosans = localFont({
@@ -20,9 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body suppressHydrationWarning className={`${icielnovecentosans.variable}`}>
-        <main>
-          {children}
-        </main>
+        <main>{children}</main>
       </body>
     </html>
   );
