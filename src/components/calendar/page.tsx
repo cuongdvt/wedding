@@ -1,12 +1,12 @@
 import { range } from 'lodash';
 
-import { fontBegatri } from '@/app/fonts';
+import { fontDoulaise } from '@/app/fonts';
 
 const CalendarSectionView: React.FC = () => {
   return (
     <div className="calendar flex flex-col w-1/4 justify-center items-center px-4 py-12 space-y-8">
       {/* Month */}
-      <span className={`${fontBegatri.className} text-5xl`}>Tháng 10</span>
+      <span className={`${fontDoulaise.className} text-5xl`}>Tháng 10</span>
 
       {/* Days */}
       <table className="w-full table-fixed border-collapse">

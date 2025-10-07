@@ -3,7 +3,7 @@ import localFont from 'next/font/local';
 
 export const fontHastegi: NextFontWithVariable = localFont({
   src: '../../assets/fonts/hastegi.otf',
-  variable: '--font-icielnovecentosans',
+  variable: '--font-hastegi',
   display: 'swap',
 });
 
@@ -21,6 +21,18 @@ export const fontBegatri: NextFontWithVariable = localFont({
 
 export const fontEbgaramond: NextFontWithVariable = localFont({
   src: '../../assets/fonts/ebgaramond.ttf',
-  variable: '--font-begatri',
+  variable: '--font-ebgaramond',
+  display: 'swap',
+});
+
+export const fontDoulaise: NextFontWithVariable = localFont({
+  src: '../../assets/fonts/doulaise.otf',
+  variable: '--font-doulaise',
+  display: 'swap',
+});
+
+export const fontCormorantinfant: NextFontWithVariable = localFont({
+  src: '../../assets/fonts/cormorantinfant.ttf',
+  variable: '--font-cormorantinfant',
   display: 'swap',
 });

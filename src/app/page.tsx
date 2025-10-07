@@ -3,6 +3,7 @@ import type React from 'react';
 import CalendarSectionView from '@/components/calendar/page';
 import DecisionSectionView from '@/components/decision/page';
 import IntroSectionView from '@/components/intro/page';
+import InvitationSectionView from '@/components/invitation/page';
 
 const Home: React.FC = () => {
   return (
@@ -15,6 +16,9 @@ const Home: React.FC = () => {
 
       {/* Calendar */}
       <CalendarSectionView />
+
+      {/* Calendar */}
+      <InvitationSectionView />
     </div>
   );
 };
