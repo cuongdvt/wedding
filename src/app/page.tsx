@@ -1,5 +1,6 @@
 import type React from 'react';
 
+import CalendarSectionView from '@/components/calendar/page';
 import DecisionSectionView from '@/components/decision/page';
 import IntroSectionView from '@/components/intro/page';
 
@@ -11,6 +12,9 @@ const Home: React.FC = () => {
 
       {/* Decision */}
       <DecisionSectionView />
+
+      {/* Calendar */}
+      <CalendarSectionView />
     </div>
   );
 };
