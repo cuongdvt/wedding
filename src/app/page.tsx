@@ -5,7 +5,7 @@ import IntroSectionView from '@/components/intro/page';
 
 const Home: React.FC = () => {
   return (
-    <div className="h-screen w-screen flex flex-col overflow-hidden">
+    <div className="w-screen flex flex-col overflow-hidden justify-center items-center">
       {/* Intro Image */}
       <IntroSectionView />
 

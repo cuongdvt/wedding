@@ -1,12 +1,13 @@
-import { fontBegatri, fontHastegi } from '@/app/fonts';
 import Image from 'next/image';
+
+import { fontBegatri, fontHastegi } from '@/app/fonts';
 
 const IntroSectionView: React.FC = () => {
   return (
-    <div className="flex h-full justify-center">
+    <div className="flex w-1/4 justify-center">
       {/* Image */}
-      <div className='relative  h-3/4'>
-        <Image src="/images/1.jpg" alt="intro" width={0} height={0} sizes="100vh" className="w-auto h-full" priority />
+      <div className="relative">
+        <Image src="/images/1.jpg" alt="intro" width={0} height={0} sizes="100vw" className="w-full h-auto" priority />
 
         {/* Name */}
         <div className="absolute bottom-0 left-0 px-5">

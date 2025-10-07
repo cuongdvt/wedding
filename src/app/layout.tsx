@@ -6,11 +6,7 @@ export const metadata: Metadata = {
   title: 'Thái Cường & Thu Phương',
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}): ReactElement {
+export default function RootLayout({ children }: { children: React.ReactNode }): ReactElement {
   return (
     <html lang="en">
       <body suppressHydrationWarning>
@@ -18,4 +14,4 @@ export default function RootLayout({
       </body>
     </html>
   );
-};
+}

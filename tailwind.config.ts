@@ -6,15 +6,7 @@ export default {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {
-      textColor: {
-        'header': "#4472C4"
-      },
-      fontFamily: {
-        icielnovecentosans: 'var(--font-icielnovecentosans)',
-        begatri: 'var(--font-begatri)'
-      },
-    }
+    extend: {}
   },
   plugins: [
     require('@tailwindcss/forms'),
