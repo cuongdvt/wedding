@@ -7,7 +7,7 @@ const IntroSectionView: React.FC = () => {
     <div className="flex w-1/4 justify-center">
       {/* Image */}
       <div className="relative">
-        <Image src="/images/1.jpg" alt="intro" width={0} height={0} sizes="100vw" className="w-full h-auto" priority />
+        <Image src="/wedding/images/1.jpg" alt="intro" width={0} height={0} sizes="100vw" className="w-full h-auto" priority />
 
         {/* Name */}
         <div className="absolute bottom-0 left-0 px-5">
