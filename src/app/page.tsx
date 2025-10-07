@@ -1,6 +1,7 @@
 import IntroSectionView from '@/components/intro/page';
+import type React from 'react';
 
-export default function Home() {
+const Home: React.FC = () => {
   return (
     <div className="h-screen w-screen flex flex-col overflow-hidden">
       {/* Intro Image */}
