@@ -1,11 +1,11 @@
 import { fontBegatri, fontHastegi } from '@/app/fonts';
 import Image from 'next/image';
 
-const IntroSectionView: React.FC = () => {
+const DecisionSectionView: React.FC = () => {
   return (
     <div className="flex h-full justify-center">
       {/* Image */}
-      <div className='relative  h-3/4'>
+      <div className='relative h-3/4'>
         <Image src="/images/1.jpg" alt="intro" width={0} height={0} sizes="100vh" className="w-auto h-full" priority />
 
         {/* Name */}
@@ -19,4 +19,4 @@ const IntroSectionView: React.FC = () => {
   );
 };
 
-export default IntroSectionView;
+export default DecisionSectionView;

@@ -11,7 +11,8 @@ export default {
         'header': "#4472C4"
       },
       fontFamily: {
-        icielnovecentosans: 'var(--font-icielnovecentosans)'
+        icielnovecentosans: 'var(--font-icielnovecentosans)',
+        begatri: 'var(--font-begatri)'
       },
     }
   },
