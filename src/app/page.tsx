@@ -1,5 +1,6 @@
-import IntroSectionView from '@/components/intro/page';
 import type React from 'react';
+
+import IntroSectionView from '@/components/intro/page';
 
 const Home: React.FC = () => {
   return (
@@ -8,4 +9,6 @@ const Home: React.FC = () => {
       <IntroSectionView />
     </div>
   );
-}
+};
+
+export default Home;
