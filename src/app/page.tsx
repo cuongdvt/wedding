@@ -1,5 +1,6 @@
 import type React from 'react';
 
+import AlbumSectionView from '@/components/album/page';
 import CalendarSectionView from '@/components/calendar/page';
 import ConfirmSectionView from '@/components/confirm/page';
 import DecisionSectionView from '@/components/decision/page';
@@ -23,6 +24,7 @@ const Home: React.FC = () => {
       <InvitationSectionView />
 
       {/* album */}
+      <AlbumSectionView />
 
       {/* confirm */}
       <ConfirmSectionView />

@@ -5,7 +5,7 @@ import { fontBegatri, fontEbgaramond } from '@/app/fonts';
 const DecisionSectionView: React.FC = () => {
   return (
     <div
-      className="flex flex-col w-1/4 justify-center items-center py-10 space-y-8"
+      className="flex flex-col sm:w-1/4 w-full justify-center items-center py-10 space-y-8"
       style={{
         backgroundImage: "url('/wedding/images/decision-imior.png'), url('/wedding/images/decision-bg.jpg')",
       }}

@@ -10,7 +10,7 @@ import { Tooltip } from 'react-tooltip';
 const InvitationSectionView: React.FC = () => {
   return (
     <div
-      className="flex flex-col w-1/4 justify-center items-center px-4 py-12 space-y-8"
+      className="flex flex-col sm:w-1/4 w-full justify-center items-center px-4 py-12 space-y-8"
       style={{
         backgroundImage: "url('/wedding/images/decision-bg.jpg')",
       }}

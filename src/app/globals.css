@@ -55,3 +55,8 @@ option {
 .thanks {
   color: var(--background);
 }
+
+.album {
+  color: var(--background);
+  background: var(--foreground);
+}

@@ -56,7 +56,7 @@ const ConfirmSectionView: React.FC = () => {
 
   return (
     <div
-      className="flex flex-col w-1/4 justify-center items-center py-4"
+      className="flex flex-col sm:w-1/4 w-full justify-center items-center py-4"
       style={{
         backgroundImage: "url('/wedding/images/confirm-bg-left.png'), url('/wedding/images/confirm-bg-right.png'), url('/wedding/images/decision-bg.jpg')",
         backgroundRepeat: "no-repeat, repeat-x, repeat",

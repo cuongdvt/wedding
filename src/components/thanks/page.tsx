@@ -6,7 +6,7 @@ import { fontCormorantinfant, fontDoulaise } from '@/app/fonts';
 const ThanksSectionView: React.FC = () => {
   return (
     <div
-      className="thanks flex flex-col w-1/4 justify-center items-center px-4 py-12 space-y-8"
+      className="thanks flex flex-col sm:w-1/4 w-full justify-center items-center px-4 py-12 space-y-8"
       style={{
         backgroundImage: "url('/wedding/images/3.JPG')",
       }}
