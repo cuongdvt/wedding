@@ -26,7 +26,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-
 input {
   outline-color: var(--foreground);
 }
@@ -39,7 +38,7 @@ select {
   outline-color: var(--foreground);
 }
 
-option[value=""][disabled][selected] {
+option[value=''][disabled][selected] {
   display: none;
 }
 
@@ -59,4 +58,12 @@ option {
 .album {
   color: var(--background);
   background: var(--foreground);
+}
+
+.swiper-button-next {
+  color: var(--foreground);
+}
+
+.swiper-button-prev {
+  color: var(--foreground);
 }
