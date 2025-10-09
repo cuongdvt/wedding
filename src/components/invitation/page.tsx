@@ -151,7 +151,7 @@ const InvitationSectionView: React.FC = () => {
                 <Image src="/wedding/images/pin.png" alt="intro" width={25} height={25} priority />
                 <span className={`${fontEbgaramond.className} text-xl text-center underline underline-offset-3`}>Chỉ đường</span>
               </div>
-              <Tooltip id="nha_gai_addr" clickable={true}>
+              <Tooltip id="nha_gai_addr" clickable={true} openOnClick={true}>
                 {/* map */}
                 <div className="flex w-full items-center space-x-4">
                   <iframe
