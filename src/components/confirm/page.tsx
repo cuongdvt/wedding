@@ -79,14 +79,14 @@ const ConfirmSectionView: React.FC = () => {
       <form onSubmit={handleSubmit} className="flex flex-col w-full px-4 space-y-3 pt-8">
         <input id="name" name="Tên" placeholder="Tên của bạn" className="border rounded-md px-2 py-1" />
         <textarea id="message" name="Lời chúc" placeholder="Gửi lời nhắn đến cô dâu chú rể" className="border rounded-md px-2" rows={4} />
-        <select id="confirm" name="Xác nhận" className="border rounded-md px-2 py-1">
+        <select id="confirm" value={''} name="Xác nhận" className="border rounded-md px-2 py-1">
           <option disabled value="">
             Bạn sẽ đến chứ?
           </option>
           <option value="có">Mình chắc chắn sẽ đến!</option>
           <option value="không">Mình bận rồi!</option>
         </select>
-        <select id="included" name="Đi cùng với" className="border rounded-md px-2 py-1">
+        <select id="included" value={''} name="Đi cùng với" className="border rounded-md px-2 py-1">
           <option disabled value="">
             Bạn tham dự cùng ai?
           </option>
@@ -96,7 +96,7 @@ const ConfirmSectionView: React.FC = () => {
           <option value="3 người">3 người</option>
           <option value="4 người">4 người</option>
         </select>
-        <select id="whose" name="Khách của" className="border rounded-md px-2 py-1">
+        <select id="whose" name="Khách của" value={''} className="border rounded-md px-2 py-1">
           <option disabled value="">
             Bạn là khách mời của ai?
           </option>

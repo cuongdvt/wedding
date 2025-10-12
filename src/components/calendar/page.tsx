@@ -64,7 +64,7 @@ const CalendarSectionView: React.FC = () => {
                 <>
                   {day}
                   {day === 28 && (
-                    <AnimationOnScroll animateIn="animate__backInUp" className="absolute top-0 left-0">
+                    <AnimationOnScroll animateIn="animate__backInUp" className="absolute sm:-top-1 top-0 left-0">
                       <Image
                         src="/wedding/images/miscellaneous.png"
                         alt="heart"
