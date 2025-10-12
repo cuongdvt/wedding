@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 import { fontBegatri, fontEbgaramond } from '@/app/fonts';
 
@@ -18,9 +19,9 @@ const DecisionSectionView: React.FC = () => {
       </div>
 
       {/* Image */}
-      <div className="w-3/4">
+      <AnimationOnScroll animateIn="animate__flipInY" className="w-3/4">
         <Image src="/wedding/images/2.jpg" alt="intro" width={0} height={0} sizes="100vw" className="w-full h-auto" priority />
-      </div>
+      </AnimationOnScroll>
     </div>
   );
 };

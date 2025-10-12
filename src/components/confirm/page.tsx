@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 import { type SubmitHandler, useForm } from 'react-hook-form';
 
 import { fontCormorantinfant, fontDoulaise, fontHastegi } from '@/app/fonts';
@@ -55,7 +56,7 @@ const ConfirmSectionView: React.FC = () => {
 
   return (
     <div
-      className="flex flex-col sm:w-1/4 w-full justify-center items-center py-4"
+      className="flex flex-col sm:w-1/4 w-full justify-center items-center pb-6 pt-10"
       style={{
         backgroundImage:
           "url('/wedding/images/confirm-bg-left.png'), url('/wedding/images/confirm-bg-right.png'), url('/wedding/images/decision-bg.jpg')",
@@ -65,9 +66,11 @@ const ConfirmSectionView: React.FC = () => {
       }}
     >
       {/* Text */}
-      <span className={`${fontCormorantinfant.className} text-xl text-center`}>
-        Hãy xác nhận sự có mặt của bạn để chúng mình chuẩn bị đón tiếp một cách chu đáo nhất. Trân trọng!{' '}
-      </span>
+      <AnimationOnScroll animateIn="animate__slideInUp text-center w-full">
+        <span className={`${fontCormorantinfant.className} text-xl text-center`}>
+          Hãy xác nhận sự có mặt của bạn để chúng mình chuẩn bị đón tiếp một cách chu đáo nhất. Trân trọng!{' '}
+        </span>
+      </AnimationOnScroll>
 
       {/* form */}
       <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col w-full px-4 space-y-3 pt-8">
@@ -110,17 +113,17 @@ const ConfirmSectionView: React.FC = () => {
       </form>
 
       {/* QR */}
-      <div className="flex flex-col justify-center items-center space-y-2 w-full px-4 pt-2">
+      <AnimationOnScroll animateIn="animate__slideInUp" className="flex flex-col justify-center items-center space-y-2 w-full px-4 pt-2">
         <button type="submit" className=" w-full py-2 border rounded-md px-2 cursor-pointer bg-[#8b0909] text-[#edd9cc]">
           Mừng cưới
         </button>
-      </div>
+      </AnimationOnScroll>
 
       {/* Countdown */}
-      <div className="flex flex-col justify-center items-center pt-10 space-y-2">
+      <AnimationOnScroll animateIn="animate__tada" className="flex flex-col justify-center items-center pt-10 space-y-2">
         <span className={`${fontDoulaise.className} text-6xl`}>Countdown</span>
         <span className={`${fontHastegi.className} text-6xl`}>{timeLeft}</span>
-      </div>
+      </AnimationOnScroll>
     </div>
   );
 };

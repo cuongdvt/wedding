@@ -1,4 +1,6 @@
 import { range } from 'lodash';
+import Image from 'next/image';
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 import { fontDoulaise } from '@/app/fonts';
 
@@ -58,17 +60,23 @@ const CalendarSectionView: React.FC = () => {
           </tr>
           <tr>
             {range(27, 32).map((day) => (
-              <td
-                key={day}
-                className={`py-3 text-center relative ${day === 28 && 'font-bold animate-[pulse_1s_infinite]'}`}
-                style={{
-                  backgroundImage: day === 28 ? "url('/wedding/images/miscellaneous.png')" : '',
-                  backgroundRepeat: 'no-repeat' /* Prevents the image from repeating */,
-                  backgroundPosition: 'center' /* Centers the image */,
-                  backgroundSize: 'cover' /* Scales the image to cover the entire element */,
-                }}
-              >
-                {day}
+              <td key={day} className="py-3 text-center relative">
+                <>
+                  {day}
+                  {day === 28 && (
+                    <AnimationOnScroll animateIn="animate__backInUp" duration={2} className="absolute -top-2 left-0">
+                      <Image
+                        src="/wedding/images/miscellaneous.png"
+                        alt="heart"
+                        width={0}
+                        height={0}
+                        sizes="100vw"
+                        className="w-full h-auto"
+                        priority
+                      />
+                    </AnimationOnScroll>
+                  )}
+                </>
               </td>
             ))}
           </tr>

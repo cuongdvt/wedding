@@ -1,3 +1,5 @@
+'use client';
+
 import type React from 'react';
 
 import AlbumSectionView from '@/components/album/page';

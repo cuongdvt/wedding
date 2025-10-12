@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 import { Tooltip } from 'react-tooltip';
 import { Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -16,31 +17,37 @@ const InvitationSectionView: React.FC = () => {
       }}
     >
       {/* mời */}
-      <span className={`${fontEbgaramond.className} text-2xl uppercase text-center py-2`}>Thân mời tới dự lễ cưới thân mật của chúng tôi</span>
+      <AnimationOnScroll animateIn="animate__fadeInUp" className="w-full text-center">
+        <span className={`${fontEbgaramond.className} text-2xl uppercase py-2`}>Thân mời tới dự lễ cưới thân mật của chúng tôi</span>
+      </AnimationOnScroll>
 
       {/* ten */}
       <div className="flex flex-col justify-center relative space-y-7 py-4">
-        <div className="absolute left-1/2 top-1/2 -translate-1/2">
+        <AnimationOnScroll animateIn="animate__fadeInUp" className="absolute left-1/2 top-1/2 -translate-1/2">
           <span
             className={`${fontBegatri.className} uppercase text-[160px] tracking-wide hover:opacity-100 opacity-35 transition-opacity duration-1000`}
           >
             &
           </span>
-        </div>
-        <span className={`${fontCormorantinfant.className} uppercase text-center text-5xl`}>Thái Cường</span>
-        <span className={`${fontCormorantinfant.className} uppercase text-center text-5xl`}>Thu Phương</span>
+        </AnimationOnScroll>
+        <AnimationOnScroll animateIn="animate__fadeInLeft" className="w-full text-center">
+          <span className={`${fontCormorantinfant.className} uppercase text-5xl`}>Thái Cường</span>
+        </AnimationOnScroll>
+        <AnimationOnScroll animateIn="animate__fadeInRight" className="w-full text-center">
+          <span className={`${fontCormorantinfant.className} uppercase text-center text-5xl`}>Thu Phương</span>
+        </AnimationOnScroll>
       </div>
 
       {/* ảnh */}
       <div className="w-full flex flex-row-reverse justify-center py-4">
-        <div className="rotate-12 w-2/5 flex flex-col shadow-xl bg-neutral-200 rounded-sm">
-          <Image src="/wedding/images/3.JPG" alt="intro" width={0} height={0} sizes="100vw" className="w-full h-auto p-3" priority />
+        <AnimationOnScroll animateIn="animate__flipInX" className="rotate-12 w-2/5 flex flex-col shadow-xl bg-neutral-200 rounded-sm">
+          <Image src="/wedding/images/co_dau.JPG" alt="intro" width={0} height={0} sizes="100vw" className="w-full h-auto p-3" priority />
           <div className="h-8"></div>
-        </div>
-        <div className="-rotate-12 w-2/5 flex flex-col shadow-xl bg-neutral-200 rounded-sm">
-          <Image src="/wedding/images/1.jpg" alt="intro" width={0} height={0} sizes="100vw" className="w-full h-auto p-3" priority />
+        </AnimationOnScroll>
+        <AnimationOnScroll animateIn="animate__flipInY" className="-rotate-12 w-2/5 flex flex-col shadow-xl bg-neutral-200 rounded-sm">
+          <Image src="/wedding/images/chu_re.JPG" alt="intro" width={0} height={0} sizes="100vw" className="w-full h-auto p-3" priority />
           <div className="h-8"></div>
-        </div>
+        </AnimationOnScroll>
       </div>
 
       {/* nha trai/gai */}
@@ -78,7 +85,7 @@ const InvitationSectionView: React.FC = () => {
                 tiệc nhà trai <br /> được tổ chức vào lúc
               </span>
               {/* thời gian */}
-              <div className="flex items-center space-x-4">
+              <AnimationOnScroll animateIn="animate__zoomIn" className="flex items-center space-x-4">
                 <div className="border-y">
                   <span className={`${fontCormorantinfant.className} text-2xl uppercase text-center`}>17 giờ 30</span>
                 </div>
@@ -86,19 +93,19 @@ const InvitationSectionView: React.FC = () => {
                 <div className="border-y">
                   <span className={`${fontCormorantinfant.className} text-2xl uppercase text-center`}>Thứ 3</span>
                 </div>
-              </div>
+              </AnimationOnScroll>
               <div className="w-1/6 flex justify-center items-center">
                 <Image src="/wedding/images/ring.png" alt="intro" width={0} height={0} sizes="100vw" className="w-full h-auto" priority />
               </div>
               {/* địa chỉ */}
-              <div className="flex flex-col items-center space-y-2">
+              <AnimationOnScroll animateIn="animate__slideInUp" className="flex flex-col items-center space-y-2">
                 <span className={`${fontCormorantinfant.className} text-3xl uppercase text-center`}>
                   Nhà khách 99 <br /> Quân chủng PK - KQ
                 </span>
                 <span className={`${fontCormorantinfant.className} text-xl text-center`}>Số 184 Trường Chinh - Kim Liên - Hà Nội</span>
-              </div>
+              </AnimationOnScroll>
               {/* chỉ duong */}
-              <div data-tooltip-id="nha_trai_addr" className="flex items-center animate-bounce space-x-2 cursor-pointer">
+              <div data-tooltip-id="nha_trai_addr" className="flex animate-bounce items-center space-x-2 cursor-pointer">
                 <Image src="/wedding/images/pin.png" alt="intro" width={25} height={25} priority />
                 <span className={`${fontEbgaramond.className} text-xl text-center underline underline-offset-3`}>Chỉ đường</span>
               </div>

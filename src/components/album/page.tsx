@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 import { fontDoulaise, fontEbgaramond } from '@/app/fonts';
 
@@ -16,13 +17,92 @@ const AlbumSectionView: React.FC = () => {
       </div>
 
       {/* Image */}
-      <div className="flex w-full space-x-2">
-        <div className="flex w-2/3">
-          <Image src="/wedding/images/1.jpg" alt="intro" width={0} height={0} sizes="100vw" className="w-full h-auto" priority />
+      <div className="w-full flex flex-col space-y-2">
+        <AnimationOnScroll animateIn="animate__zoomIn" className="flex w-full h-[240px] space-x-2">
+          <Image
+            src="/wedding/images/album/IMG_1441.JPG"
+            alt="intro"
+            width={0}
+            height={0}
+            sizes="100vw"
+            className="w-full h-auto"
+            priority
+            style={{ objectFit: 'cover' }}
+          />
+        </AnimationOnScroll>
+
+        <div className="flex w-full space-x-2">
+          <AnimationOnScroll animateIn="animate__fadeInDown" className="flex w-2/3">
+            <Image src="/wedding/images/album/IMG_1443.JPG" alt="intro" width={0} height={0} sizes="100vw" className="w-full h-auto" priority />
+          </AnimationOnScroll>
+          <div className="flex flex-col w-1/3 space-y-2">
+            <AnimationOnScroll animateIn="animate__lightSpeedInRight" className="flex w-full">
+              <Image src="/wedding/images/album/IMG_1444.JPG" alt="intro" width={0} height={0} sizes="100vw" className="w-full h-auto" priority />
+            </AnimationOnScroll>
+            <AnimationOnScroll animateIn="animate__lightSpeedInLeft" className="flex w-full">
+              <Image src="/wedding/images/album/IMG_1424.JPG" alt="intro" width={0} height={0} sizes="100vw" className="w-full h-auto" priority />
+            </AnimationOnScroll>
+          </div>
         </div>
-        <div className="flex flex-col w-1/3 space-y-2">
-          <Image src="/wedding/images/2.jpg" alt="intro" width={0} height={0} sizes="100vw" className="w-full h-auto" priority />
-          <Image src="/wedding/images/3.JPG" alt="intro" width={0} height={0} sizes="100vw" className="w-full h-auto" priority />
+
+        <div className="flex w-full flex-col space-y-2">
+          <AnimationOnScroll animateIn="animate__jackInTheBox" className="flex w-full">
+            <Image
+              src="/wedding/images/album/IMG_1495.JPG"
+              alt="intro"
+              width={0}
+              height={0}
+              sizes="100vw"
+              className="w-full h-auto"
+              priority
+              style={{ objectFit: 'cover' }}
+            />
+          </AnimationOnScroll>
+          <div className="flex w-full space-x-2 pr-2">
+            <AnimationOnScroll animateIn="animate__rotateInDownRight" className="w-1/2">
+              <Image src="/wedding/images/album/IMG_1494.JPG" alt="intro" width={0} height={0} sizes="100vw" className="w-full h-auto" priority />
+            </AnimationOnScroll>
+            <AnimationOnScroll animateIn="animate__rotateInDownLeft" className="w-1/2">
+              <Image src="/wedding/images/album/IMG_1496.JPG" alt="intro" width={0} height={0} sizes="100vw" className="w-full h-auto" priority />
+            </AnimationOnScroll>
+          </div>
+        </div>
+
+        <div className="flex w-full flex-col space-y-2">
+          <div className="flex w-full space-x-2 pr-2">
+            <AnimationOnScroll animateIn="animate__fadeInTopRight" className="flex w-1/2">
+              <Image src="/wedding/images/album/IMG_1492.JPG" alt="intro" width={0} height={0} sizes="100vw" className="w-full h-auto" priority />
+            </AnimationOnScroll>
+            <AnimationOnScroll animateIn="animate__fadeInTopLeft" className="flex w-1/2">
+              <Image src="/wedding/images/album/IMG_1489.JPG" alt="intro" width={0} height={0} sizes="100vw" className="w-full h-auto" priority />
+            </AnimationOnScroll>
+          </div>
+          <div className="flex w-full space-x-2 pr-2">
+            <AnimationOnScroll animateIn="animate__fadeInBottomRight" className="flex w-1/2">
+              <Image
+                src="/wedding/images/album/IMG_1490.JPG"
+                alt="intro"
+                width={0}
+                height={0}
+                sizes="100vw"
+                className="w-full h-auto"
+                priority
+                style={{ objectFit: 'cover' }}
+              />
+            </AnimationOnScroll>
+            <AnimationOnScroll animateIn="animate__fadeInBottomLeft" className="flex w-1/2">
+              <Image
+                src="/wedding/images/album/IMG_1491.JPG"
+                alt="intro"
+                width={0}
+                height={0}
+                sizes="100vw"
+                className="w-full h-auto"
+                priority
+                style={{ objectFit: 'cover' }}
+              />
+            </AnimationOnScroll>
+          </div>
         </div>
       </div>
     </div>
