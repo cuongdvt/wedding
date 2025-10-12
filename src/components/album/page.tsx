@@ -58,7 +58,7 @@ const AlbumSectionView: React.FC = () => {
               style={{ objectFit: 'cover' }}
             />
           </AnimationOnScroll>
-          <div className="flex w-full space-x-2 pr-2">
+          <div className="flex w-full space-x-2">
             <AnimationOnScroll animateIn="animate__rotateInDownRight" className="w-1/2">
               <Image src="/wedding/images/album/IMG_1494.JPG" alt="intro" width={0} height={0} sizes="100vw" className="w-full h-auto" priority />
             </AnimationOnScroll>
@@ -69,7 +69,7 @@ const AlbumSectionView: React.FC = () => {
         </div>
 
         <div className="flex w-full flex-col space-y-2">
-          <div className="flex w-full space-x-2 pr-2">
+          <div className="flex w-full space-x-2">
             <AnimationOnScroll animateIn="animate__fadeInTopRight" className="flex w-1/2">
               <Image src="/wedding/images/album/IMG_1492.JPG" alt="intro" width={0} height={0} sizes="100vw" className="w-full h-auto" priority />
             </AnimationOnScroll>
@@ -77,7 +77,7 @@ const AlbumSectionView: React.FC = () => {
               <Image src="/wedding/images/album/IMG_1489.JPG" alt="intro" width={0} height={0} sizes="100vw" className="w-full h-auto" priority />
             </AnimationOnScroll>
           </div>
-          <div className="flex w-full space-x-2 pr-2">
+          <div className="flex w-full space-x-2">
             <AnimationOnScroll animateIn="animate__fadeInBottomRight" className="flex w-1/2">
               <Image
                 src="/wedding/images/album/IMG_1490.JPG"
