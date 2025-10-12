@@ -8,7 +8,6 @@ import Modal from 'react-modal';
 import { Tooltip } from 'react-tooltip';
 
 import { fontCormorantinfant, fontDoulaise, fontEbgaramond, fontHastegi } from '@/app/fonts';
-import sendMail from '@/libs/send-mail';
 
 Modal.setAppElement('#confirm');
 
@@ -60,19 +59,26 @@ const ConfirmSectionView: React.FC = () => {
   }, [timeLeft]); // Re-run effect when timeLeft changes
 
   const onSubmit: SubmitHandler<Inputs> = async (values) => {
-    const response = await sendMail({
-      email: 'cuongdvt261@gmail.com',
-      sendTo: values.whose == 're' ? 'duvuthacu261@gmail.com' : 'phuonglethu5921@gmail.com',
-      subject: 'Xác nhận tham gia đám cưới',
-      text: `
-        Tên: ${values.name}
-        Lời chúc: ${values.message}
-        Xác nhận tham gia: ${values.confirm === 'co' ? 'Có' : 'Không'}
-        Khách mời của: ${values.whose === 're' ? 'Chú rể' : 'Cô dâu'}
-        Đi cùng: ${Number(values.included) === 0 ? '1 mình' : `${values.included} người`}
-      `,
+    const res = await fetch('https://sandbox.api.mailtrap.io/api/send/4096449', {
+      method: 'POST',
+      headers: {
+        Authorization: 'Bearer 7fe7e0e6562f7343c6920cdb3a8dc772',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        from: { email: 'cuongdvt261@gmail.com', name: 'Wedding Invitation' },
+        to: [{ email: values.whose == 're' ? 'duvuthacu261@gmail.com' : 'phuonglethu5921@gmail.com' }],
+        subject: 'Xác nhận tham gia đám cưới',
+        text: `
+            Tên: ${values.name}
+            Lời chúc: ${values.message}
+            Xác nhận tham gia: ${values.confirm === 'co' ? 'Có' : 'Không'}
+            Khách mời của: ${values.whose === 're' ? 'Chú rể' : 'Cô dâu'}
+            Đi cùng: ${Number(values.included) === 0 ? '1 mình' : `${values.included} người`}
+          `,
+      }),
     });
-    if (response?.messageId) {
+    if (res.status) {
       setThanksIsOpen(true);
     }
   };
