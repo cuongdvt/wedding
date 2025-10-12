@@ -1,10 +1,12 @@
 'use client';
 
+import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import { type SubmitHandler, useForm } from 'react-hook-form';
+import { Tooltip } from 'react-tooltip';
 
-import { fontCormorantinfant, fontDoulaise, fontHastegi } from '@/app/fonts';
+import { fontCormorantinfant, fontDoulaise, fontEbgaramond, fontHastegi } from '@/app/fonts';
 
 type Inputs = {
   name: string;
@@ -56,6 +58,7 @@ const ConfirmSectionView: React.FC = () => {
 
   return (
     <div
+      id="confirm"
       className="flex flex-col sm:w-1/4 w-full justify-center items-center pb-6 pt-10"
       style={{
         backgroundImage:
@@ -114,9 +117,41 @@ const ConfirmSectionView: React.FC = () => {
 
       {/* QR */}
       <AnimationOnScroll animateIn="animate__slideInUp" className="flex flex-col justify-center items-center space-y-2 w-full px-4 pt-2">
-        <button type="submit" className=" w-full py-2 border rounded-md px-2 cursor-pointer bg-[#8b0909] text-[#edd9cc]">
+        <button data-tooltip-id="qr" type="submit" className=" w-full py-2 border rounded-md px-2 cursor-pointer bg-[#8b0909] text-[#edd9cc]">
           Mừng cưới
         </button>
+        <Tooltip id="qr" clickable={true} openOnClick={true} style={{ backgroundColor: '#8b0909' }}>
+          <div className="flex w-[400px] items-center space-x-2 p-1">
+            <div className="flex flex-col w-1/2 justify-center items-center border p-2 rounded-xl space-y-1">
+              <Image
+                src="https://img.vietqr.io/image/MB-0978812394-qr_only.png"
+                alt="bank1"
+                width={0}
+                height={0}
+                sizes="100vw"
+                className="w-full h-auto"
+                priority
+              />
+              <span className={`${fontEbgaramond.className} text-lg`}>Dương Vũ Thái Cường</span>
+              <span className={`${fontEbgaramond.className}`}>MB</span>
+              <span className={`${fontEbgaramond.className}`}>0978812394</span>
+            </div>
+            <div className="flex flex-col w-1/2 justify-center items-center border p-2 rounded-xl space-y-1">
+              <Image
+                src="https://img.vietqr.io/image/MB-0334429908-qr_only.png"
+                alt="bank2"
+                width={0}
+                height={0}
+                sizes="100vw"
+                className="w-full h-auto"
+                priority
+              />
+              <span className={`${fontEbgaramond.className} text-lg`}>Lê Thu Phương</span>
+              <span className={`${fontEbgaramond.className}`}>MB</span>
+              <span className={`${fontEbgaramond.className}`}>0334429908</span>
+            </div>
+          </div>
+        </Tooltip>
       </AnimationOnScroll>
 
       {/* Countdown */}

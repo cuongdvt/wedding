@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     url: 'https://cuongdvt.github.io/wedding/',
     siteName: 'Wedding Invitation',
     type: 'website',
+    images: [],
   },
 };
 
