@@ -18,7 +18,9 @@ const InvitationSectionView: React.FC = () => {
     >
       {/* mời */}
       <AnimationOnScroll animateIn="animate__fadeInUp" className="w-full text-center">
-        <span className={`${fontEbgaramond.className} text-2xl uppercase py-2`}>Thân mời tới dự lễ cưới thân mật của chúng tôi</span>
+        <span className={`${fontEbgaramond.className} text-2xl uppercase py-2`}>
+          Thân mời tới dự lễ cưới <br /> thân mật của chúng tôi
+        </span>
       </AnimationOnScroll>
 
       {/* ten */}

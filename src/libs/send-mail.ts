@@ -14,9 +14,9 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-interface ISendmailBody {
-  email: string;
-  sendTo?: string;
+export interface ISendmailBody {
+  from: string;
+  to: string;
   subject: string;
   text: string;
 }
@@ -29,8 +29,8 @@ const sendMail = async (props: ISendmailBody): Promise<SMTPTransport.SentMessage
     return null;
   }
   return await transporter.sendMail({
-    from: props.email,
-    to: props.sendTo,
+    from: props.from,
+    to: props.to,
     subject: props.subject,
     text: props.text,
   });

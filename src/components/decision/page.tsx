@@ -13,7 +13,9 @@ const DecisionSectionView: React.FC = () => {
     >
       {/* Text */}
       <div className="flex flex-col w-full justify-center items-center space-y-4">
-        <span className={`${fontEbgaramond.className} text-4xl text-center uppercase`}>Quyết định bên nhau trọn đời</span>
+        <span className={`${fontEbgaramond.className} text-4xl text-center uppercase`}>
+          Quyết định <br /> bên nhau trọn đời
+        </span>
         <span className={`${fontBegatri.className} text-5xl`}>Save the date</span>
         <span className={`${fontEbgaramond.className} text-4xl`}>28.10.2025</span>
       </div>
