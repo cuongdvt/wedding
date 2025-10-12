@@ -33,6 +33,8 @@ const Home: React.FC = () => {
 
       {/* confirm */}
       <ThanksSectionView />
+
+      {/* <BackgroundAudioPlayer /> */}
     </div>
   );
 };

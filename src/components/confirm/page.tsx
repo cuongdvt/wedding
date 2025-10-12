@@ -91,10 +91,10 @@ const ConfirmSectionView: React.FC = () => {
             Bạn tham dự cùng ai?
           </option>
           <option value="1 mình">1 mình</option>
-          <option value="1 mình">1 mình</option>
-          <option value="2 người">2 người</option>
-          <option value="3 người">3 người</option>
-          <option value="4 người">4 người</option>
+          <option value="cùng 1 người nữa">cùng 1 người nữa</option>
+          <option value="cùng 2 người nữa">cùng 2 người nữa</option>
+          <option value="cùng 3 người nữa">cùng 3 người nữa</option>
+          <option value="cùng 4 người nữa">cùng 4 người nữa</option>
         </select>
         <select id="whose" name="Khách của" defaultValue={''} className="border rounded-md px-2 py-1">
           <option disabled value="">
