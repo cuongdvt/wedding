@@ -3,8 +3,6 @@
 import Image from 'next/image';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import { Tooltip } from 'react-tooltip';
-import { Navigation } from 'swiper/modules';
-import { Swiper, SwiperSlide } from 'swiper/react';
 
 import { fontBegatri, fontCormorantinfant, fontEbgaramond } from '@/app/fonts';
 
@@ -73,109 +71,93 @@ const InvitationSectionView: React.FC = () => {
 
       {/* thiep */}
       <div className="w-full pt-2">
-        <Swiper
-          // install Swiper modules
-          modules={[Navigation]}
-          spaceBetween={50}
-          slidesPerView={1}
-          navigation={true}
-        >
-          {/* Nha trai */}
-          <SwiperSlide>
-            <div className="w-full flex flex-col justify-center items-center py-2 space-y-4">
-              <span className={`${fontCormorantinfant.className} text-xl uppercase text-center`}>
-                tiệc nhà trai <br /> được tổ chức vào lúc
-              </span>
-              {/* thời gian */}
-              <AnimationOnScroll animateIn="animate__zoomIn" className="flex items-center space-x-4">
-                <div className="border-y">
-                  <span className={`${fontCormorantinfant.className} text-2xl uppercase text-center`}>17 giờ 30</span>
-                </div>
-                <span className={`${fontCormorantinfant.className} sm:text-6xl text-4xl uppercase text-center`}>28.10.2025</span>
-                <div className="border-y">
-                  <span className={`${fontCormorantinfant.className} text-2xl uppercase text-center`}>Thứ 3</span>
-                </div>
-              </AnimationOnScroll>
-              <div className="w-1/6 flex justify-center items-center">
-                <Image src="/wedding/images/ring.png" alt="intro" width={0} height={0} sizes="100vw" className="w-full h-auto" priority />
-              </div>
-              {/* địa chỉ */}
-              <AnimationOnScroll animateIn="animate__slideInUp" className="flex flex-col items-center space-y-2">
-                <span className={`${fontCormorantinfant.className} text-3xl uppercase text-center`}>
-                  Nhà khách 99 <br /> Quân chủng PK - KQ
-                </span>
-                <span className={`${fontCormorantinfant.className} text-xl text-center`}>Số 184 Trường Chinh - Kim Liên - Hà Nội</span>
-              </AnimationOnScroll>
-              {/* chỉ duong */}
-              <div data-tooltip-id="nha_trai_addr" className="flex animate-bounce items-center space-x-2 cursor-pointer">
-                <Image src="/wedding/images/pin.png" alt="intro" width={25} height={25} priority />
-                <span className={`${fontEbgaramond.className} text-xl text-center underline underline-offset-3`}>Chỉ đường</span>
-              </div>
-              {/* map */}
-              <Tooltip id="nha_trai_addr" clickable={true} openOnClick={true}>
-                <div className="flex w-full items-center space-x-4">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14899.19907445894!2d105.831363!3d21.000662!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ac7d042c7e53%3A0x7932c3bbcf187106!2zTmjDoCBLaMOhY2ggOTkgUXXDom4gQ2jhu6duZyBQaMOybmcgS2jDtG5nIEtow7RuZyBRdcOibg!5e0!3m2!1sen!2sus!4v1759888136179!5m2!1sen!2sus"
-                    width={'100%'}
-                    height={250}
-                    allowFullScreen={false}
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                  />
-                </div>
-              </Tooltip>
+        <div className="w-full flex flex-col justify-center items-center py-2 space-y-4">
+          <span className={`${fontCormorantinfant.className} text-xl uppercase text-center`}>
+            tiệc nhà trai <br /> được tổ chức vào lúc
+          </span>
+          {/* thời gian */}
+          <AnimationOnScroll animateIn="animate__zoomIn" className="flex items-center space-x-4">
+            <div className="border-y">
+              <span className={`${fontCormorantinfant.className} text-2xl uppercase text-center`}>17 giờ 30</span>
             </div>
-          </SwiperSlide>
-          {/* nha gai */}
-          <SwiperSlide>
-            <div className="w-full flex flex-col justify-center items-center py-2 space-y-4">
-              <span className={`${fontCormorantinfant.className} text-xl uppercase text-center`}>
-                tiệc nhà gái <br /> được tổ chức vào lúc
-              </span>
-              {/* thời gian */}
-              <div className="flex items-center space-x-4">
-                <div className="border-y">
-                  <span className={`${fontCormorantinfant.className} text-2xl uppercase text-center`}>17 giờ</span>
-                </div>
-                <span className={`${fontCormorantinfant.className} sm:text-6xl text-4xl uppercase text-center`}>27.10.2025</span>
-                <div className="border-y">
-                  <span className={`${fontCormorantinfant.className} text-2xl uppercase text-center`}>Thứ 2</span>
-                </div>
-              </div>
-              {/* ring */}
-              <div className="w-1/6 flex justify-center items-center">
-                <Image src="/wedding/images/ring.png" alt="intro" width={0} height={0} sizes="100vw" className="w-full h-auto" priority />
-              </div>
-              {/* địa chỉ */}
-              <div className="flex flex-col items-center space-y-2">
-                <span className={`${fontCormorantinfant.className} text-3xl uppercase text-center`}>
-                  Nhà văn hoá <br /> thôn linh quy đông
-                </span>
-                <span className={`${fontCormorantinfant.className} text-xl text-center first-letter:uppercase`}>
-                  ngõ 212 Linh Quy Đông - Thuận An - Hà Nội
-                </span>
-              </div>
-              {/* chỉ đường */}
-              <div data-tooltip-id="nha_gai_addr" className="flex items-center animate-bounce space-x-2 cursor-pointer">
-                <Image src="/wedding/images/pin.png" alt="intro" width={25} height={25} priority />
-                <span className={`${fontEbgaramond.className} text-xl text-center underline underline-offset-3`}>Chỉ đường</span>
-              </div>
-              <Tooltip id="nha_gai_addr" clickable={true} openOnClick={true}>
-                {/* map */}
-                <div className="flex w-full items-center space-x-4">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1862.1182702029444!2d105.9886732!3d21.0232194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135a7ac6a222ce5%3A0x3b88ea7a6b14a630!2zTkjDgCBWxIJOIEjDk0EgVEjDlE4gTElOSCBRVVkgxJDDlE5H!5e0!3m2!1sen!2s!4v1759886908997!5m2!1sen!2s"
-                    width={'100%'}
-                    height={250}
-                    allowFullScreen={false}
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                  />
-                </div>
-              </Tooltip>
+            <span className={`${fontCormorantinfant.className} sm:text-6xl text-4xl uppercase text-center`}>28.10.2025</span>
+            <div className="border-y">
+              <span className={`${fontCormorantinfant.className} text-2xl uppercase text-center`}>Thứ 3</span>
             </div>
-          </SwiperSlide>
-        </Swiper>
+          </AnimationOnScroll>
+          <div className="w-1/6 flex justify-center items-center">
+            <Image src="/wedding/images/ring.png" alt="intro" width={0} height={0} sizes="100vw" className="w-full h-auto" priority />
+          </div>
+          {/* địa chỉ */}
+          <AnimationOnScroll animateIn="animate__slideInUp" className="flex flex-col items-center space-y-2">
+            <span className={`${fontCormorantinfant.className} text-3xl uppercase text-center`}>
+              Nhà khách 99 <br /> Quân chủng PK - KQ
+            </span>
+            <span className={`${fontCormorantinfant.className} text-xl text-center`}>Số 184 Trường Chinh - Kim Liên - Hà Nội</span>
+          </AnimationOnScroll>
+          {/* chỉ duong */}
+          <div data-tooltip-id="nha_trai_addr" className="flex animate-bounce items-center space-x-2 cursor-pointer">
+            <Image src="/wedding/images/pin.png" alt="intro" width={25} height={25} priority />
+            <span className={`${fontEbgaramond.className} text-xl text-center underline underline-offset-3`}>Chỉ đường</span>
+          </div>
+          {/* map */}
+          <Tooltip id="nha_trai_addr" clickable={true} openOnClick={true}>
+            <div className="flex w-full items-center space-x-4">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14899.19907445894!2d105.831363!3d21.000662!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ac7d042c7e53%3A0x7932c3bbcf187106!2zTmjDoCBLaMOhY2ggOTkgUXXDom4gQ2jhu6duZyBQaMOybmcgS2jDtG5nIEtow7RuZyBRdcOibg!5e0!3m2!1sen!2sus!4v1759888136179!5m2!1sen!2sus"
+                width={'100%'}
+                height={250}
+                allowFullScreen={false}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
+          </Tooltip>
+        </div>
+        <div className="border-1 border-dashed w-full h-0.5"></div>
+        <div className="w-full flex flex-col justify-center items-center pb-2 pt-4 space-y-4">
+          <span className={`${fontCormorantinfant.className} text-xl uppercase text-center`}>
+            tiệc nhà gái <br /> được tổ chức vào lúc
+          </span>
+          {/* thời gian */}
+          <AnimationOnScroll animateIn="animate__zoomIn" className="flex items-center space-x-4">
+            <div className="border-y">
+              <span className={`${fontCormorantinfant.className} text-2xl uppercase text-center`}>17 giờ</span>
+            </div>
+            <span className={`${fontCormorantinfant.className} sm:text-6xl text-4xl uppercase text-center`}>27.10.2025</span>
+            <div className="border-y">
+              <span className={`${fontCormorantinfant.className} text-2xl uppercase text-center`}>Thứ 2</span>
+            </div>
+          </AnimationOnScroll>
+          <div className="w-1/6 flex justify-center items-center">
+            <Image src="/wedding/images/ring.png" alt="intro" width={0} height={0} sizes="100vw" className="w-full h-auto" priority />
+          </div>
+          {/* địa chỉ */}
+          <AnimationOnScroll animateIn="animate__slideInUp" className="flex flex-col items-center space-y-2">
+            <span className={`${fontCormorantinfant.className} text-3xl uppercase text-center`}>
+              Nhà văn hoá <br /> thôn linh quy đông
+            </span>
+            <span className={`${fontCormorantinfant.className} text-xl text-center`}>Ngõ 212 Linh Quy Đông - Thuận An - Hà Nội</span>
+          </AnimationOnScroll>
+          {/* chỉ duong */}
+          <div data-tooltip-id="nha_gai_addr" className="flex animate-bounce items-center space-x-2 cursor-pointer">
+            <Image src="/wedding/images/pin.png" alt="intro" width={25} height={25} priority />
+            <span className={`${fontEbgaramond.className} text-xl text-center underline underline-offset-3`}>Chỉ đường</span>
+          </div>
+          {/* map */}
+          <Tooltip id="nha_gai_addr" clickable={true} openOnClick={true}>
+            <div className="flex w-full items-center space-x-4">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1862.1182702029444!2d105.9886732!3d21.0232194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135a7ac6a222ce5%3A0x3b88ea7a6b14a630!2zTkjDgCBWxIJOIEjDk0EgVEjDlE4gTElOSCBRVVkgxJDDlE5H!5e0!3m2!1sen!2s!4v1759886908997!5m2!1sen!2s"
+                width={'100%'}
+                height={250}
+                allowFullScreen={false}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
+          </Tooltip>
+        </div>
       </div>
     </div>
   );
