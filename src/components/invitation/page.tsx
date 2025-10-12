@@ -133,7 +133,7 @@ const InvitationSectionView: React.FC = () => {
               {/* thời gian */}
               <div className="flex items-center space-x-4">
                 <div className="border-y">
-                  <span className={`${fontCormorantinfant.className} text-2xl uppercase text-center`}>16 giờ 30</span>
+                  <span className={`${fontCormorantinfant.className} text-2xl uppercase text-center`}>17 giờ</span>
                 </div>
                 <span className={`${fontCormorantinfant.className} sm:text-6xl text-4xl uppercase text-center`}>27.10.2025</span>
                 <div className="border-y">
