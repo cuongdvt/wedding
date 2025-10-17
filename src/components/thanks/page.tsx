@@ -7,7 +7,7 @@ const ThanksSectionView: React.FC = () => {
     <div
       className="thanks flex flex-col sm:w-1/4 w-full justify-center items-center px-4 py-12 space-y-8"
       style={{
-        backgroundImage: "url('/wedding/images/3.JPG')",
+        backgroundImage: "url('/wedding/images/album/JUL05626.JPG')",
       }}
     >
       {/* mời */}

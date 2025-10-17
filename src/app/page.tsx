@@ -3,6 +3,7 @@
 import type React from 'react';
 
 import AlbumSectionView from '@/components/album/page';
+import BackgroundAudioPlayer from '@/components/audio/page';
 import CalendarSectionView from '@/components/calendar/page';
 import ConfirmSectionView from '@/components/confirm/page';
 import DecisionSectionView from '@/components/decision/page';
@@ -34,7 +35,10 @@ const Home: React.FC = () => {
       {/* confirm */}
       <ThanksSectionView />
 
-      {/* <BackgroundAudioPlayer /> */}
+      {/* Music */}
+      <div className="fixed inset-x-1 bottom-2">
+        <BackgroundAudioPlayer />
+      </div>
     </div>
   );
 };

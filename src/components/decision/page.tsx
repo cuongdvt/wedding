@@ -22,7 +22,7 @@ const DecisionSectionView: React.FC = () => {
 
       {/* Image */}
       <AnimationOnScroll animateIn="animate__flipInY" className="w-3/4">
-        <Image src="/wedding/images/2.jpg" alt="intro" width={0} height={0} sizes="100vw" className="w-full h-auto" priority />
+        <Image src="/wedding/images/album/JUL04018.jpg" alt="intro" width={0} height={0} sizes="100vw" className="w-full h-auto" priority />
       </AnimationOnScroll>
     </div>
   );
