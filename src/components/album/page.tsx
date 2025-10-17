@@ -169,7 +169,6 @@ const AlbumSectionView: React.FC = () => {
               <Image src="/wedding/images/album/JUL05356.jpg" alt="intro" width={0} height={0} sizes="100vw" className="w-full h-auto" priority />
             </AnimationOnScroll>
           </div>
-
         </div>
 
         {/* 1 ngang 2 doc */}
@@ -197,7 +196,7 @@ const AlbumSectionView: React.FC = () => {
             </AnimationOnScroll>
           </div>
           <AnimationOnScroll animateIn="animate__jackInTheBox" className="flex w-full">
-            <Image src="/wedding/images/album/JUL05446.jpg" alt="intro" width={0} height={0} sizes="100vw" className="w-full h-auto" priority />
+            <Image src="/wedding/images/album/JUL05446.JPG" alt="intro" width={0} height={0} sizes="100vw" className="w-full h-auto" priority />
           </AnimationOnScroll>
         </div>
       </div>

@@ -16,18 +16,13 @@ const BackgroundAudioPlayer: React.FC = () => {
   };
 
   return (
-    <div className='w-auto'>
-      <button className='flex items-center space-x-1 px-2 py-1 rounded-2xl bg-[#edd9cc] cursor-pointer border border-[#8b0909]' onClick={handleTogglePlay}>
-        {
-          isPlaying ?
-            (
-              <PauseCircleIcon className="size-8 text-[#8b0909]" />
-            ) :
-            (
-              <PlayCircleIcon className="size-8 text-[#8b0909]" />
-            )
-        }
-        <p className='text-[#8b0909] text-sm'>{'Một Đời - 14 Casper, Bon Nghiêm'}</p>
+    <div className="w-auto">
+      <button
+        className="flex items-center space-x-1 px-2 py-1 rounded-2xl bg-[#edd9cc] cursor-pointer border border-[#8b0909]"
+        onClick={handleTogglePlay}
+      >
+        {isPlaying ? <PauseCircleIcon className="size-8 text-[#8b0909]" /> : <PlayCircleIcon className="size-8 text-[#8b0909]" />}
+        <p className="text-[#8b0909] text-sm">{'Một Đời - 14 Casper, Bon Nghiêm'}</p>
       </button>
     </div>
   );

@@ -41,11 +41,11 @@ const InvitationSectionView: React.FC = () => {
       {/* ảnh */}
       <div className="w-full flex flex-row-reverse justify-center py-4">
         <AnimationOnScroll animateIn="animate__flipInX" className="rotate-12 w-2/5 flex flex-col shadow-xl bg-neutral-200 rounded-sm">
-          <Image src="/wedding/images/album/JUL03911.JPG" alt="intro" width={0} height={0} sizes="100vw" className="w-full h-auto p-3" priority />
+          <Image src="/wedding/images/album/JUL03911.jpg" alt="intro" width={0} height={0} sizes="100vw" className="w-full h-auto p-3" priority />
           <div className="h-8"></div>
         </AnimationOnScroll>
         <AnimationOnScroll animateIn="animate__flipInY" className="-rotate-12 w-2/5 flex flex-col shadow-xl bg-neutral-200 rounded-sm">
-          <Image src="/wedding/images/album/JUL04133.JPG" alt="intro" width={0} height={0} sizes="100vw" className="w-full h-auto p-3" priority />
+          <Image src="/wedding/images/album/JUL04133.jpg" alt="intro" width={0} height={0} sizes="100vw" className="w-full h-auto p-3" priority />
           <div className="h-8"></div>
         </AnimationOnScroll>
       </div>
