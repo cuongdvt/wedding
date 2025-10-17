@@ -1,19 +1,23 @@
 import { PauseCircleIcon, PlayCircleIcon } from '@heroicons/react/24/outline';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import useSound from 'use-sound';
 
 const BackgroundAudioPlayer: React.FC = () => {
   const [isPlaying, setIsPlaying] = useState(true);
-  const [play, { stop }] = useSound('/wedding/sounds/background_music.mp3', { loop: true, volume: 40 });
+  const [play, { pause }] = useSound('/wedding/sounds/background_music.mp3', { loop: true });
 
   const handleTogglePlay = (): void => {
     if (isPlaying) {
-      stop();
+      pause();
     } else {
       play();
     }
     setIsPlaying(!isPlaying);
   };
+
+  useEffect(() => {
+    play();
+  }, [play]);
 
   return (
     <div className="w-auto">
@@ -22,7 +26,7 @@ const BackgroundAudioPlayer: React.FC = () => {
         onClick={handleTogglePlay}
       >
         {isPlaying ? <PauseCircleIcon className="size-8 text-[#8b0909]" /> : <PlayCircleIcon className="size-8 text-[#8b0909]" />}
-        <p className="text-[#8b0909] text-sm">{'Một Đời - 14 Casper, Bon Nghiêm'}</p>
+        <p className="text-[#8b0909] text-sm">{'Ngày Đầu Tiên - Đức Phúc'}</p>
       </button>
     </div>
   );
