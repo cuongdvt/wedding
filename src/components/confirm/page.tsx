@@ -179,7 +179,7 @@ const ConfirmSectionView: React.FC = () => {
             </div>
           </div>
           <div className={`${fontDoulaise.className} text-6xl text-end pt-4`}>Thank you</div>
-          <Image src="/wedding/images/album/IMG_1444.JPG" alt="intro" width={0} height={0} sizes="100vw" className="w-full h-auto pt-4" priority />
+          <Image src="/wedding/images/album/JUL04308.jpg" alt="intro" width={0} height={0} sizes="100vw" className="w-full h-auto pt-4" priority />
           <span className={`${fontCormorantinfant.className} text-end pt-4`}>
             Những lời chúc này sẽ là động lực rất lớn giúp chúng mình bước vào một cánh cửa hôn nhân đầy mới mẻ.
           </span>
